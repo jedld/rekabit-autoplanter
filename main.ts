@@ -77,10 +77,10 @@ loops.everyInterval(10000, function () {
     } else {
         OLED.writeStringNewLine("Tank out of water!")
     }
-    for (let i = 0; i < moistureLevel_t.length && i < 16; i++) {
-        let start = i * 8
+    for (let i = 0; i < moistureLevel_t.length && i < 32; i++) {
+        let start = i * 4
         let offset = (moistureLevel_t[i] - 200) * 32 / 700
-        OLED.drawRectangle(start, 32 + offset, start + 7, 63)
+        OLED.drawRectangle(start, 32 + offset, start + 3, 62)
     }
 
 })
